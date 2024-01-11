@@ -30,7 +30,6 @@ def write_config(key, value):
 
 def main():
 	autorestart = read_config("autorestart")							# 現在の再起動設定を読み込む
-	print(autorestart)
 	if autorestart == "1":												# 再起動する設定ならば
 		write_config("autorestart", "2")								# 設定のautorestartを2に変更した上で
 		print(f"{now} リブート")											# リブートする
